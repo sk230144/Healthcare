@@ -1,0 +1,71 @@
+/* cqw units resolve against .hero__inner (the poster container). */
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 80cqw;
+  margin-top: 5cqw;
+}
+
+.services li { position: relative; }
+.services li + li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4%;
+  height: 70%;
+  width: 1px;
+  background: var(--line);
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6cqw;
+  padding: 0 0.5cqw;
+  text-align: center;
+  text-decoration: none;
+  color: var(--ink);
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+.service:hover { transform: translateY(-3px); }
+.service:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
+
+.service__icon {
+  display: grid;
+  place-items: center;
+  width: 9.4cqw;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transition: box-shadow 0.2s ease;
+}
+.service__icon svg { width: 46%; height: 46%; }
+.service:hover .service__icon { box-shadow: 0 6px 18px rgba(30, 60, 120, 0.15); }
+
+.service__icon--green  { background: var(--green-bg);  color: var(--green); }
+.service__icon--blue   { background: var(--blue-bg);   color: var(--blue); }
+.service__icon--orange { background: var(--orange-bg); color: var(--orange); }
+.service__icon--purple { background: var(--purple-bg); color: var(--purple); }
+
+.service__label {
+  font-size: max(10px, 2.35cqw);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+@media (min-width: 1024px) {
+  .services {
+    max-width: 600px;
+    margin-top: 2.75rem;
+  }
+  .service { gap: 0.85rem; padding: 0 0.5rem; }
+  .service__icon { width: 64px; }
+  .service__label { font-size: 0.95rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service,
+  .service__icon { transition: none; }
+}

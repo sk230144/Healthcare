@@ -1,0 +1,23 @@
+/* Stage proportions + device placement, taken from the 941 × 1672 Figma export. */
+
+.devices {
+  position: relative;
+  margin-top: 10cqw;
+  aspect-ratio: 941 / 600;
+  --laptop-left: 12.2%;
+  --laptop-width: 63%;
+  --phone-left: 76.5%;
+  --phone-top: 24%;
+  --phone-width: 21.3%;
+}
+
+@media (min-width: 1024px) {
+  .devices {
+    margin-top: 0;
+    --laptop-left: 0%;
+    --laptop-width: 76%;
+    --phone-left: 75%;
+    --phone-top: 22%;
+    --phone-width: 24%;
+  }
+}

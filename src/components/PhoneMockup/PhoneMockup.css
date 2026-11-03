@@ -1,0 +1,108 @@
+/* Position comes from DeviceShowcase via --phone-left / --phone-top / --phone-width.
+   .phone is its own container, so everything inside scales with the phone width. */
+
+.phone {
+  position: absolute;
+  left: var(--phone-left);
+  top: var(--phone-top);
+  width: var(--phone-width);
+  aspect-ratio: 9 / 18.4;
+  border-radius: 17% / 8.3%;
+  background: linear-gradient(160deg, #3b4048, #111316 40%);
+  box-shadow:
+    inset 0 0 0 1.5px #5b616b,
+    0 22px 36px rgba(15, 35, 70, 0.28);
+  container-type: inline-size;
+}
+
+.phone__screen {
+  position: absolute;
+  inset: 4.2cqw;
+  display: flex;
+  flex-direction: column;
+  gap: 5.5cqw;
+  padding: 10cqw 8cqw 8cqw;
+  overflow: hidden;
+  border-radius: 12cqw;
+  background: #fff;
+}
+
+.stat__label {
+  font-size: 7.6cqw;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.stat__value {
+  margin-top: 1.4cqw;
+  font-size: 11cqw;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--green);
+}
+
+.bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 3.2cqw;
+  height: 28cqw;
+  margin-top: 2cqw;
+}
+.bars span {
+  flex: 1;
+  border-radius: 1.1cqw 1.1cqw 0 0;
+  background: linear-gradient(180deg, #5b8ff5, #2a63e6);
+}
+.bars span:nth-child(-n + 3) { opacity: 0.55; }
+
+.trend {
+  width: 100%;
+  height: 27cqw;
+  margin-top: 2cqw;
+}
+
+.reviews {
+  margin-top: auto;
+  padding-top: 4.5cqw;
+  border-top: 1px solid #edf0f5;
+  text-align: center;
+}
+
+.reviews__row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4.5cqw;
+}
+
+.reviews__avatar {
+  display: grid;
+  place-items: center;
+  width: 14cqw;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #e3ecfd;
+  color: #2357d8;
+}
+.reviews__avatar svg { width: 55%; height: 55%; }
+
+.reviews__score {
+  font-size: 11.5cqw;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.reviews__stars {
+  margin-top: 1.4cqw;
+  font-size: 9cqw;
+  letter-spacing: 0.9cqw;
+  line-height: 1;
+  color: #f5b301;
+}
+
+.reviews__label {
+  margin-top: 1.8cqw;
+  font-size: 6.8cqw;
+  font-weight: 500;
+  color: #3a4458;
+}

@@ -1,0 +1,42 @@
+/* Design tokens + reset.
+   Source: Figma 2gcXuQpqxZMqFVHgNKAT8V · node 2652:183 */
+
+:root {
+  --navy: #0b1530;
+  --ink: #141c2f;
+  --text: #2b3445;
+  --muted: #5a6478;
+  --blue: #1a4fe0;
+  --blue-2: #2c6af2;
+  --line: #dde4ee;
+  --green: #22a85f;
+  --green-bg: #e2f6ea;
+  --blue-bg: #e5eefd;
+  --orange: #d9682a;
+  --orange-bg: #fdeadb;
+  --purple: #5a4bd8;
+  --purple-bg: #ece8fc;
+
+  --font-display: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-body: "Urbanist", system-ui, sans-serif;
+  --font-serif: "DM Serif Display", Georgia, serif;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html, body { margin: 0; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg { display: block; }
+p, h1, h2, ul { margin: 0; }
+ul { padding: 0; list-style: none; }
+
+.nowrap { white-space: nowrap; }
