@@ -1,0 +1,45 @@
+.growth {
+  overflow: hidden; /* chart bleeds past the right edge, as in Figma */
+  background: #000;
+  border-radius: 9px;
+  color: #fff;
+}
+
+.growth__inner {
+  position: relative;
+  max-width: var(--frame);
+  min-height: 323px;
+  margin-inline: auto;
+  padding: 61px 0 40px 36px;
+}
+
+.growth__text {
+  position: relative;
+  z-index: 1;
+  max-width: 289px;
+  font-family: var(--font-arial);
+  font-size: 27px;
+  line-height: 35px;
+}
+
+/* Figma crops the chart to its right-hand 84% (173 × 137 slot) */
+.growth__chart {
+  position: absolute;
+  right: -8px;
+  bottom: 27px;
+  width: 173px;
+  height: 137px;
+  object-fit: cover;
+  object-position: right center;
+}
+
+@media (min-width: 900px) {
+  .growth { border-radius: 0; }
+  .growth__inner {
+    max-width: 1080px;
+    min-height: 380px;
+    padding: 90px 32px;
+  }
+  .growth__text { max-width: 560px; font-size: 40px; line-height: 1.3; }
+  .growth__chart { right: 32px; bottom: 50%; width: 320px; height: 254px; transform: translateY(50%); }
+}

@@ -5,7 +5,7 @@ import "./Hero.css";
 /** "Scale Your Healthcare Business" hero — Figma node 2652:183. */
 export function Hero() {
   return (
-    <main className="hero">
+    <section className="hero">
       <div className="hero__bg" aria-hidden="true">
         <span className="hero__wave" />
         <span className="hero__window" />
@@ -32,6 +32,6 @@ export function Hero() {
 
         <DeviceShowcase />
       </div>
-    </main>
+    </section>
   );
 }

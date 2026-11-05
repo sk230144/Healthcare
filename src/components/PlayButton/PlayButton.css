@@ -1,0 +1,25 @@
+/* Centered over its (position: relative) media container. */
+.play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease;
+}
+.play:hover { transform: translate(-50%, -50%) scale(1.06); }
+.play:focus-visible { outline: 3px solid #fff; outline-offset: 2px; border-radius: 50%; }
+
+/* SVGs that carry a drop shadow are offset so the visible circle stays centered. */
+.play--shadow img { margin-top: 16px; }
+.play--split > img { grid-area: 1 / 1; margin-top: 16px; }
+.play--split .play__triangle { margin-left: 11px; } /* sits 5.5px right of center, as in Figma */
+
+@media (prefers-reduced-motion: reduce) {
+  .play { transition: none; }
+}

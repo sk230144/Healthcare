@@ -1,0 +1,49 @@
+.process { padding: 109px 0 89px; }
+
+.process__steps {
+  display: grid;
+  max-width: var(--frame);
+  margin: 66px auto 0;
+  padding: 0 22px 0 36px;
+  list-style: none;
+}
+
+.process__step {
+  display: grid;
+  grid-template-columns: 109px 1fr;
+  align-items: center;
+  min-height: 125px;
+}
+
+.process__num {
+  font-family: var(--font-arial-black);
+  font-weight: 900;
+  font-size: 96px;
+  line-height: 125px;
+  background: linear-gradient(180deg, #c2ff1c, #2c5512);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+
+.process__line { display: block; }
+
+.process__step p {
+  max-width: 235px;
+  font-family: var(--font-arial);
+  font-size: 20px;
+  line-height: 23px;
+  color: #000;
+}
+
+@media (min-width: 900px) {
+  .process { padding-top: 72px; }
+  .process__arrows { display: none; } /* desktop shows all hospital cards at once */
+  .process__steps {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 48px;
+    max-width: 960px;
+    margin-top: 0;
+    padding-inline: 32px;
+  }
+}

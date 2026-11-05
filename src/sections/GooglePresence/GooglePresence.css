@@ -1,0 +1,48 @@
+.google-presence {
+  padding: 0 0 316px;
+  overflow: hidden;
+}
+
+.google-presence__inner {
+  max-width: var(--frame);
+  margin-inline: auto;
+}
+
+/* Figma lets the laptop bleed off the right edge (609px wide in a 402px frame). */
+.google-presence__laptop img {
+  width: 151.5%;
+  max-width: none;
+  height: auto;
+}
+
+.google-presence__card {
+  max-width: 329px;
+  min-height: 245px;
+  margin: 33px auto 0;
+  padding: 32px 45px 32px 40px;
+  border-radius: 25px;
+  background: var(--heading-blue);
+  font-family: var(--font-arial);
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #fff;
+}
+
+@media (max-width: 401px) {
+  .google-presence__card { margin-inline: 24px; }
+}
+
+@media (min-width: 900px) {
+  .google-presence { padding-bottom: 140px; }
+  .google-presence__inner {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    align-items: center;
+    gap: 40px;
+    max-width: 1080px;
+    padding-inline: 32px;
+  }
+  .google-presence__laptop img { width: 100%; }
+  .google-presence__card { max-width: 420px; margin: 0; font-size: 21px; }
+}

@@ -1,0 +1,46 @@
+.near-me { background: #000; }
+
+.near-me__inner {
+  max-width: var(--frame);
+  margin-inline: auto;
+  padding: 91px 0 37px;
+}
+
+.near-me__text {
+  max-width: 341px;
+  padding-left: 50px;
+  box-sizing: content-box;
+  font-family: var(--font-inter);
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 45px;
+  color: #bdbdbd;
+}
+.near-me__text strong {
+  font-weight: 400;
+  color: #fff;
+}
+
+.near-me__art {
+  width: calc(100% - 4px);
+  max-width: 398px;
+  height: auto;
+  margin: 9px 0 0 10px;
+}
+
+@media (max-width: 401px) {
+  .near-me__text { max-width: calc(100% - 70px); padding-left: 40px; font-size: 36px; line-height: 42px; }
+}
+
+@media (min-width: 900px) {
+  .near-me__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 48px;
+    max-width: 1080px;
+    padding: 96px 32px;
+  }
+  .near-me__text { max-width: 460px; padding: 0; font-size: 52px; line-height: 1.15; }
+  .near-me__art { width: 100%; max-width: 520px; margin: 0; }
+}

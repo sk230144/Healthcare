@@ -20,6 +20,21 @@
   --font-display: "Plus Jakarta Sans", system-ui, sans-serif;
   --font-body: "Urbanist", system-ui, sans-serif;
   --font-serif: "DM Serif Display", Georgia, serif;
+  --font-inter: "Inter", system-ui, sans-serif;
+  --font-arial: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --font-arial-black: "Arial Black", "Arial Bold", Arial, sans-serif;
+  --font-redhat: "Red Hat Display", system-ui, sans-serif;
+  --font-redrose: "Red Rose", Georgia, serif;
+
+  /* Landing page (Figma frame 2648:2 — 402px mobile) */
+  --frame: 402px;
+  --heading-blue: #0e5fd2;
+  --heading-muted: #4a689e;
+  --grad-from: #73adff;
+  --grad-to: #043984;
+  --step-green: #3ec358;
+  --cta-green: #45824b;
+  --footer-green: #13392c;
 }
 
 *,
@@ -40,3 +55,56 @@ p, h1, h2, ul { margin: 0; }
 ul { padding: 0; list-style: none; }
 
 .nowrap { white-space: nowrap; }
+
+/* ── Layout helpers ─────────────────────────────────────────────── */
+
+/* Content column: the 402px Figma frame on phones, wider on desktop. */
+.wrap {
+  width: 100%;
+  max-width: var(--frame);
+  margin-inline: auto;
+}
+
+@media (min-width: 900px) {
+  .wrap--wide { max-width: 1080px; padding-inline: 32px; }
+}
+
+/* ── Section headings (3 styles used in the design) ─────────────── */
+
+.section-heading {
+  margin: 0 auto;
+  font-family: var(--font-inter);
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 1.21;
+  text-align: center;
+}
+
+.section-heading--gradient {
+  background: linear-gradient(90deg, var(--grad-from), var(--grad-to));
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+
+.section-heading--blue { color: var(--heading-blue); }
+
+.section-heading--muted {
+  font-family: var(--font-arial);
+  font-weight: 400;
+  line-height: 35px;
+  color: var(--heading-muted);
+}
+
+@media (min-width: 900px) {
+  .section-heading { font-size: 34px; max-width: 720px !important; }
+  .section-heading--muted { line-height: 1.35; }
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

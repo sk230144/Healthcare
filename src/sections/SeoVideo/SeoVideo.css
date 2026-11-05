@@ -1,0 +1,23 @@
+.seo-video { padding: 51px 0 13px; }
+
+.seo-video__card {
+  position: relative;
+  width: 326px;
+  max-width: calc(100% - 48px);
+  aspect-ratio: 326 / 212;
+  margin: 15px auto 0;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.18);
+}
+.seo-video__card > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.seo-video__dots { margin: 82px auto 0; }
+
+@media (min-width: 900px) {
+  .seo-video { padding-top: 96px; }
+  .seo-video__card { width: 560px; margin-top: 32px; }
+  .seo-video__dots { margin-top: 48px; }
+}

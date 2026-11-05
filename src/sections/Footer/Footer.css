@@ -1,0 +1,97 @@
+/* ── Brand bar ── */
+
+.brand {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 23px 0;
+}
+
+.brand__logo { width: 97px; height: 97px; }
+
+.brand__text {
+  display: flex;
+  flex-direction: column;
+  margin-top: 17px;
+}
+
+.brand__agency {
+  margin: 0 0 0 5px;
+  font-family: var(--font-redhat);
+  font-size: 28px;
+  line-height: 37px;
+  color: #898989;
+}
+
+/* ── Green footer ── */
+
+.footer__main {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--footer-green);
+  color: #fff;
+  font-family: var(--font-redhat);
+}
+
+/* Office photo, overlay-blended at 50% (Figma 2648:109) */
+.footer__main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url("../../assets/landing/footer-texture.webp") 51% -105px / auto 1124px no-repeat;
+  mix-blend-mode: overlay;
+  opacity: 0.5;
+}
+
+.footer__inner {
+  max-width: var(--frame);
+  margin-inline: auto;
+  padding: 48px 30px 0;
+}
+
+.footer__heading {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.footer__services ul {
+  margin-top: 11px;
+  font-size: 15px;
+  line-height: 2.5;
+}
+
+.footer__offices { margin-top: 69px; padding-left: 5px; }
+
+.footer__office {
+  max-width: 265px;
+  margin-top: 26px;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.footer__office + .footer__office { margin-top: 16px; }
+
+.footer__copy {
+  max-width: var(--frame);
+  margin: 23px auto 0;
+  padding: 0 15px 32px;
+  font-size: 13px;
+}
+
+@media (min-width: 900px) {
+  .footer__main::before { background-size: cover; background-position: center; }
+  .footer__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    max-width: 1080px;
+    padding: 72px 32px 0;
+  }
+  .footer__offices { margin-top: 0; }
+  .footer__copy { max-width: 1080px; padding: 32px 32px 40px; }
+}

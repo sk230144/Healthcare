@@ -1,0 +1,55 @@
+.clients {
+  padding: 78px 0 100px;
+  overflow: hidden;
+}
+
+.clients__marquee {
+  margin-top: 122px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+
+/* Two identical sets side by side; sliding by one set's width loops seamlessly. */
+.clients__track {
+  display: flex;
+  width: max-content;
+  animation: clients-scroll 22s linear infinite;
+}
+.clients__marquee:hover .clients__track { animation-play-state: paused; }
+
+.clients__set {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding: 0 24px 0 52px;
+}
+.clients__set > li { flex: none; }
+
+.clients__jj {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: -38px; /* Figma: JJ badge sits 10px after the Fortis logo */
+}
+.clients__jj-logo { filter: drop-shadow(4px 8px 4.5px rgba(0, 0, 0, 0.15)); }
+.clients__jj-name {
+  font-family: var(--font-redrose);
+  font-size: 23px;
+  line-height: 31px;
+  color: #fc3118;
+  white-space: nowrap;
+}
+
+@keyframes clients-scroll {
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .clients__marquee { overflow-x: auto; }
+  .clients__track { animation: none; }
+}
+
+@media (min-width: 900px) {
+  .clients { padding-top: 120px; }
+  .clients__marquee { margin-top: 72px; }
+}

@@ -1,0 +1,39 @@
+.arrows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrows__btn {
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-family: var(--font-redhat);
+  font-weight: 300;
+  line-height: 1;
+  color: #939393;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.arrows__btn:disabled { opacity: 0.4; cursor: default; }
+.arrows__btn:focus-visible { outline: 2px solid var(--heading-blue); outline-offset: 3px; }
+
+/* Bare chevrons (Figma 2653:274 / 2653:278) */
+.arrows--plain { padding-inline: 19px 12px; }
+.arrows--plain .arrows__btn { width: 28px; height: 36px; font-size: 30px; }
+
+/* Rounded-square buttons (Figma 2653:325 / 2653:328) */
+.arrows--boxed { padding-inline: 36px; }
+.arrows--boxed .arrows__btn {
+  width: 59px;
+  height: 56px;
+  padding-bottom: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 23px;
+  background: #fff;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 50px;
+}
+.arrows--boxed .arrows__btn:not(:disabled):hover { transform: translateY(-2px); }

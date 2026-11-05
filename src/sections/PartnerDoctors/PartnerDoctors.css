@@ -1,0 +1,49 @@
+.partners { padding: 0 0 59px; }
+
+.partners__track {
+  display: flex;
+  justify-content: safe center;
+  gap: 24px;
+  margin-top: 44px;
+  padding: 0 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.partners__track::-webkit-scrollbar { display: none; }
+
+.doctor-card {
+  flex: 0 0 200px;
+  scroll-snap-align: center;
+}
+
+.doctor-card__photo {
+  width: 200px;
+  height: 396px;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+.doctor-card__name {
+  margin-top: 45px;
+  padding-left: 5px;
+  font-family: var(--font-arial);
+  font-size: 25px;
+  line-height: 29px;
+  color: #000;
+}
+
+.doctor-card__role {
+  margin-top: 28px;
+  padding-left: 5px;
+  font-family: var(--font-arial);
+  font-size: 15px;
+  color: #7e7e7e;
+}
+
+@media (min-width: 900px) {
+  .partners { padding-top: 48px; }
+  .partners__track { margin-top: 48px; }
+  .doctor-card__name { margin-top: 24px; }
+  .doctor-card__role { margin-top: 8px; }
+}
