@@ -1,0 +1,304 @@
+/* ==========================================================================
+   Phone layout — pixel replica of Figma frame 2648:2 (402 × 10674).
+   1rem = 10 design px, scaled to the screen width (capped at 480px wide),
+   so the page looks identical on every phone.
+   ========================================================================== */
+
+@media (max-width: 899.98px) {
+  html { font-size: min(calc(100vw / 40.2), 11.94px); }
+}
+
+.m-page {
+  position: relative;
+  width: 40.2rem;
+  height: 1067.4rem;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #fff;
+  color: #000;
+  font-family: var(--font-arial);
+  font-size: 1.5rem;
+  -webkit-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+}
+
+.m-page p,
+.m-page h1,
+.m-page h2,
+.m-page h3,
+.m-page ol,
+.m-page ul { margin: 0; padding: 0; list-style: none; }
+
+.m-page img { max-width: none; }
+
+.m-line { display: block; white-space: nowrap; }
+
+/* Horizontal strips (logos, hospital cards, doctor) can be swiped */
+.m-strip {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+}
+.m-strip::-webkit-scrollbar { display: none; }
+
+.m-crop { overflow: hidden; }
+
+/* ── Headings (Inter Bold 25, line-height normal) ── */
+
+.m-h {
+  font-family: var(--font-inter);
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: normal;
+  text-align: center;
+}
+.m-h--grad {
+  background: linear-gradient(90deg, #73adff, #043984);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+.m-h--blue { color: #0e5fd2; }
+.m-h--muted {
+  font-family: var(--font-arial);
+  font-weight: 400;
+  line-height: 3.5rem;
+  color: #4a689e;
+}
+
+/* ── Clients ── */
+
+.m-jj-logo { box-shadow: 0.4rem 0.8rem 0.91rem rgba(0, 0, 0, 0.15); }
+.m-jj-name {
+  font-family: var(--font-redrose);
+  font-size: 2.3rem;
+  line-height: 3.098rem;
+  color: #fc3118;
+  white-space: nowrap;
+}
+
+/* ── Presence ── */
+
+.m-presence-num {
+  font-family: var(--font-inter);
+  font-weight: 500;
+  font-size: 5.5rem;
+  line-height: 2rem;
+  color: #3ec358;
+}
+.m-presence-text {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.m-presence-text--inter { font-family: var(--font-inter); }
+
+/* ── Case study ── */
+
+.m-case-video {
+  overflow: hidden;
+  border-radius: 3.9rem;
+}
+.m-case-video img { object-fit: cover; }
+
+.m-play {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+.m-play > img:first-child { display: block; width: 100%; height: 100%; }
+.m-play:focus-visible { outline: 2px solid #0e5fd2; outline-offset: 2px; border-radius: 50%; }
+
+/* ── Hospital cards ── */
+
+.m-card {
+  border-radius: 1.5rem;
+  background: #fff;
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+}
+.m-card-photo {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 8.645rem;
+  overflow: hidden;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+.m-card-logo { overflow: hidden; }
+.m-card-name {
+  font-size: 1.1rem;
+  line-height: 1.2rem;
+  color: #575757;
+}
+.m-card-name--tight { line-height: 1.1rem; }
+.m-card-name--small { font-size: 1rem; line-height: 1.1rem; }
+
+/* ── Colour bands ── */
+
+.m-band--black { background: #000; }
+.m-band--green { background: #45824b; }
+.m-band--round { border-radius: 0.9rem; }
+
+/* ── Growth ── */
+
+.m-growth-text {
+  font-size: 2.7rem;
+  line-height: 3.5rem;
+  color: #fff;
+}
+
+/* ── Process ── */
+
+.m-chev {
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-family: var(--font-redhat);
+  font-weight: 300;
+  font-size: 3rem;
+  line-height: normal;
+  color: #939393;
+  cursor: pointer;
+}
+.m-chev span { display: block; }
+.m-chev--prev span { transform: rotate(180deg); }
+
+.m-step-num {
+  font-family: var(--font-arial-black);
+  font-weight: 900;
+  font-size: 9.6rem;
+  line-height: normal;
+  background: linear-gradient(180deg, #c2ff1c, #2c5512) 0 0 / 100% 12.5rem no-repeat;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+.m-step-text {
+  font-size: 2rem;
+  line-height: normal;
+}
+.m-step-text span { display: block; }
+
+/* ── Website arrows ── */
+
+.m-box-arrow {
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 2.3rem;
+  background: none;
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.m-box-arrow span {
+  position: absolute;
+  left: 1.478rem; /* 15.78 − 1px border */
+  top: -0.379rem;
+  width: 2.785rem;
+  height: 6.127rem;
+  font-family: var(--font-redhat);
+  font-weight: 300;
+  font-size: 5rem;
+  line-height: normal;
+  color: #939393;
+}
+.m-box-arrow--prev span { transform: scaleX(-1); }
+.m-box-arrow:disabled { opacity: 0.4; cursor: default; }
+
+/* ── Doctors Near Me ── */
+
+.m-nearme {
+  font-family: var(--font-inter);
+  font-size: 4rem;
+  line-height: 4.5rem;
+  color: #fff;
+}
+.m-nearme-lead { font-weight: 300; color: #bdbdbd; }
+.m-ast { position: relative; top: -0.26em; font-size: 0.8em; line-height: 0; }
+.m-ast--lead { margin-right: 0.3rem; }
+
+/* ── SEO video ── */
+
+.m-seo-card {
+  object-fit: cover;
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.18);
+}
+
+/* ── Partner doctor ── */
+
+.m-dentist { border-radius: 2.4rem; }
+.m-doc-name { font-size: 2.5rem; line-height: normal; }
+.m-doc-role { font-size: 1.5rem; line-height: normal; color: #7e7e7e; }
+
+/* ── Google presence ── */
+
+.m-blue-card { border-radius: 2.5rem; background: #0e5fd2; }
+.m-blue-text {
+  font-style: italic;
+  font-size: 1.8rem;
+  line-height: 1.3;
+  color: #fff;
+}
+
+/* ── Doctor website video ── */
+
+.m-testimonial { object-fit: cover; border-radius: 2.1rem; }
+
+/* ── CTA ── */
+
+.m-cta-title {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: normal;
+  color: #fff;
+}
+.m-cta-button {
+  display: block;
+  padding: 2.5rem 1.1rem 0 0; /* label: top 9600, centered on x 196.5 (5.5px left of button center) */
+  border-radius: 2rem;
+  background: #000;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: normal;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+.m-cta-button:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+
+/* ── Brand + footer ── */
+
+.m-agency {
+  font-family: var(--font-redhat);
+  font-size: 2.8rem;
+  line-height: normal;
+  color: #898989;
+  white-space: nowrap;
+}
+
+.m-footer {
+  overflow: hidden;
+  isolation: isolate;
+  background: #13392c;
+}
+.m-footer-texture { mix-blend-mode: overlay; opacity: 0.5; }
+
+.m-ft-head,
+.m-ft-list,
+.m-ft-address,
+.m-ft-copy {
+  font-family: var(--font-redhat);
+  color: #fff;
+}
+.m-ft-head { font-size: 2rem; font-weight: 700; line-height: normal; }
+/* Figma rounds these line heights up: 2.5 × 15 → 38px, 1.5 × 15 → 23px */
+.m-ft-list { font-size: 1.5rem; line-height: 3.8rem; }
+.m-ft-address {
+  font-style: normal;
+  font-size: 1.5rem;
+  line-height: 2.3rem;
+  white-space: pre-wrap;
+}
+.m-ft-copy { font-size: 1.3rem; line-height: normal; white-space: pre-wrap; }

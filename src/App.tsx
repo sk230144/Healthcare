@@ -1,5 +1,7 @@
 import { useRef } from "react";
 import { Hero } from "./components/Hero/Hero";
+import { useMediaQuery } from "./hooks/useMediaQuery";
+import { MobileLanding } from "./mobile/MobileLanding";
 import { CaseStudy } from "./sections/CaseStudy/CaseStudy";
 import { Clients } from "./sections/Clients/Clients";
 import { Cta } from "./sections/Cta/Cta";
@@ -15,8 +17,16 @@ import { SeoVideo } from "./sections/SeoVideo/SeoVideo";
 import { Testimonial } from "./sections/Testimonial/Testimonial";
 import { Websites } from "./sections/Websites/Websites";
 
-/** Full landing page — Figma frame 2648:2 ("iPhone 16 Pro - 7"), top to bottom. */
+/**
+ * Phones (< 900px): pixel replica of the Figma mobile frame 2648:2.
+ * Wider screens: the responsive desktop layout below.
+ */
 export default function App() {
+  const isPhone = useMediaQuery("(max-width: 899.98px)");
+  return isPhone ? <MobileLanding /> : <DesktopLanding />;
+}
+
+function DesktopLanding() {
   const hospitalsTrack = useRef<HTMLUListElement>(null);
 
   const scrollHospitals = (direction: 1 | -1) => {

@@ -21,8 +21,9 @@
   --font-body: "Urbanist", system-ui, sans-serif;
   --font-serif: "DM Serif Display", Georgia, serif;
   --font-inter: "Inter", system-ui, sans-serif;
-  --font-arial: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  --font-arial-black: "Arial Black", "Arial Bold", Arial, sans-serif;
+  /* Arimo is metric-compatible with Arial, for devices without it (Android) */
+  --font-arial: Arial, Arimo, "Helvetica Neue", Helvetica, sans-serif;
+  --font-arial-black: "Arial Black", "Archivo Black", Arial, sans-serif;
   --font-redhat: "Red Hat Display", system-ui, sans-serif;
   --font-redrose: "Red Rose", Georgia, serif;
 
